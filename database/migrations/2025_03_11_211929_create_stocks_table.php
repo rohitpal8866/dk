@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
             $table->string('stock_no')->unique();
-            $table->string('item_code');
-            $table->string('item_name');
-            $table->integer('quantity');
-            $table->string('location');
-            $table->string('store_name');
-            $table->date('in_stock_date');
+            $table->string('item_code')->nullable();
+            $table->string('item_name')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->string('location')->nullable();
+            $table->string('store_name')->nullable();
+            $table->date('in_stock_date')->default(now())->nullable();
             $table->timestamps();
         });
     }

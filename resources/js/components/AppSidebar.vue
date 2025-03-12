@@ -19,6 +19,12 @@ const mainNavItems: NavItem[] = [
         href: '/stocks',
         icon: LayoutGrid,
     },
+
+    {
+        title: 'Bulk Stock',
+        href: '/bulk-stocks',
+        icon: LayoutGrid,
+    },
 ];
 
 const footerNavItems: NavItem[] = [
