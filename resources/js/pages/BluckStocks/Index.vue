@@ -34,9 +34,9 @@ const columnDefs = [
 ];
 
 // Reactive Data
-const rowData = ref<any[]>([]); // Keeping rowData as reactive
+const rowData = ref<any[]>([]);
 const defaultColDef = reactive({ editable: true, flex: 1 });
-const gridApi = ref<any>(null); // Ref to store grid API
+const gridApi = ref<any>(null); 
 const { post } = useForm();
 
 const prop = defineProps({
@@ -72,7 +72,7 @@ const submit = () => {
             data.quantity === '' || 
             !data.location) {
             alert('Please fill in all fields before saving.');
-            return; // Stop further processing and prevent submission
+            return; 
         }
         updatedRowData.push(data);
     });
